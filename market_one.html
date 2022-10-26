@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>商城</title>
+	<link rel="stylesheet" href="css/mdui.min.css">
+	<style type="text/css">
+		
+		.lead_table{
+			margin: 0,auto;
+		}
+		.nav{
+			margin: 0px auto;
+			list-style-type: none;
+			line-height: 40px;
+			margin: 0,auto;
+			height: 50px;
+			background-color: coral;
+			padding:0px;
+			color:black;
+			display:flex;
+			justify-content:center;
+			border-bottom: 2px solid black;
+		}
+		.lead_table li{
+			width: 400px;
+			height: 40px;
+			text-align: center;
+			font-size: 30px;
+		}
+		
+		.readypage{
+		    width: 100%;
+		
+		    background: #f5f5f5;
+		}
+		.nopaypage{
+		    width: 100%;
+		
+		    background: #f5f5f5;
+		}.cancelpage{
+		    width: 100%;
+		
+		    background: #f5f5f5;
+		}
+		.trolley_background{
+		    width: 100%;
+		    /*height:800px;*/
+		    background: #f5f5f5;
+		    padding: 24px 0;
+		}
+		.trolley_background_in{
+		    width: 1326px;
+		    /*height: 500px;*/
+		    padding: 15px 0px;
+		    background: #fff;
+		    margin: 0 auto;
+		
+		}
+		.tro_tab_h{
+		    width: 1326px;
+		    height: 70px;
+		}
+		.col{
+		    float: left;
+		}
+		.tro_tab_check{
+		    width: 110px;
+		    height: 70px;
+		}
+		.tro_tab_check_p{
+		    width:20px;
+		    height: 20px;
+		    background: #ff6700;
+		    color: #fff;
+		    text-align: center;
+		    line-height: 20px;
+		    margin-top: 25px;
+		    margin-left:25px;
+		    float: left;
+		}
+		.tro_tab_check_sp{
+		    float: left;
+		    margin-top: 25px;
+		    margin-left: 10px;
+		}
+		.tro_tab_img{
+		    width: 120px;
+		    height: 70px;
+		}
+		.tro_tab_img img{
+		    width: 80px;
+		    height: 80px;
+		}
+		.tro_tab_null{
+			width: 120px;
+			height: 70px;
+			text-align: center;
+			line-height: 70px;
+		}
+		.tro_tab_name{
+		    width: 280px;
+		    height: 70px;
+		    text-align: center;
+		    line-height: 70px;
+		}
+		.tro_tab_price{
+		    width: 160px;
+		    height: 70px;
+		    text-align: center;
+		    line-height: 70px;
+		}
+		
+		.tro_tab_number{
+		    width: 150px;
+		    height: 70px;
+		    text-align: center;
+		    line-height: 70px;
+		}
+		.tro_tab_total{
+		    width: 201px;
+		    height: 70px;
+		    text-align: center;
+		    line-height: 70px;
+		}
+		.tro_tab_action{
+		    width: 80px;
+		    height: 70px;
+		    text-align: center;
+		    line-height: 70px;
+		}
+		.tro_tab_time{
+			width: 250px;
+			height: 70px;
+			text-align: center;
+			line-height: 70px;
+		}
+		.tro_tab_h1{
+		    width: 1326px;
+		    height: 86px;
+		    padding: 16px 0;
+		}
+		.tro_tab_h1 .tro_tab_check{
+		    width: 110px;
+		    height: 86px;
+		}
+		.tro_tab_h1 .tro_tab_check_p{
+		    width:20px;
+		    height: 20px;
+		    background: #ff6700;
+		    color: #fff;
+		    text-align: center;
+		    line-height: 20px;
+		    margin-top: 25px;
+		    margin-left:25px;
+		    float: left;
+		}
+		.tro_tab_h1 .tro_tab_check_sp{
+		    float: left;
+		    margin-top: 25px;
+		    margin-left: 10px;
+		}
+		.tro_tab_h1 .tro_tab_img{
+		    width: 120px;
+		    height: 86px;
+		}
+		.tro_tab_h1 .tro_tab_img img{
+		    width: 86px;
+		    height: 86px;
+		}
+		.tro_tab_h1 .tro_tab_name{
+		    width: 280px;
+		    height: 86px;
+		    text-align: left;
+		    line-height: 86px;
+		}
+		.tro_tab_name_li1{
+		    line-height: 70px;
+		    font-size: 20px;
+		    color: #333;
+		}
+		.tro_tab_name_li2{
+		    line-height: 0px;
+		    font-size: 12px;
+		    color: #cdcac2;
+		}
+		.tro_tab_h1 .tro_tab_price{
+		    width: 159px;
+		    height: 86px;
+		    text-align: center;
+		    line-height: 86px;
+		}
+		.tro_tab_h1 .tro_tab_number{
+		    width: 150px;
+		    height: 86px;
+		    text-align: center;
+		    line-height: 86px;
+		    font-size: 16px;
+		}
+		.tro_tab_h1 .tro_tab_time{
+		    width: 250px;
+		    height: 86px;
+		    text-align: center;
+		    line-height: 86px;
+		}
+		.tro_tab_h1 .tro_tab_total{
+		    width: 201px;
+		    height: 86px;
+		    text-align: center;
+		    line-height: 86px;
+		    color: #ff6700;
+		}
+		.tro_tab_h1 .tro_tab_action{
+		    width: 80px;
+		    height: 86px;
+		    text-align: center;
+		    line-height: 86px;
+		}
+		.tro_tab_h1 .tro_tab_total_value {
+		   color: #ff6700;
+		    text-align: center;
+		}
+				html,body{
+					margin: 0;
+					width:100%;
+					height: 100%;
+					/* background-color: #dddddd; */
+					background-image: linear-gradient(to right, #d8ffe2, #9bc890);
+				}
+			.mdui-bottom-nav{
+				overflow: hidden;
+				position: fixed;
+				bottom: 0;
+				width: 100%;
+				color: aliceblue;
+				background-image: linear-gradient(to right, #567555, #23481b);
+			}
+			.top{
+				color:#44865c;
+			}
+			.span{
+				width:80%
+			}.active{
+			height: 100%;
+			color: #d8ffe2;
+			background-image: linear-gradient(to right, #7eab89, #2b5828);
+		}
+		#left{
+			border: 2px solid #d8ffe2;
+			height: 150%;
+			width: 5%;
+		}
+		.content{
+			/* border: 2px solid red; */
+			width: 150%;
+		}
+		.total{
+			/* border: 2px solid wheat; */
+			display: flex;
+			height: 90%;
+			width: 100%;
+		}
+	</style>
+	<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"/>
+</head>
+<body>
+	<div class="mdui-drawer mdui-drawer-close mdui-color-white" id="drawer">
+	    <ul class="mdui-list">
+	      <li class="mdui-list-item mdui-ripple" onclick="jump_to_DIY()">
+	        <i class="mdui-list-item-icon mdui-icon material-icons">gesture</i>
+	        <div class="mdui-list-item-content">DIY</div>
+	      </li>
+		  
+		  <li class="mdui-subheader"></li>
+		  
+		  
+	      <li class="mdui-list-item mdui-ripple" onclick="jump_to_mall()">
+	        <i class="mdui-list-item-icon mdui-icon material-icons">local_mall</i>
+	        <div class="mdui-list-item-content">商城</div>
+	      </li>
+		  
+		  <li class="mdui-subheader"></li>
+		  
+		  <div class="active">
+	      <li class="mdui-list-item mdui-ripple">
+	        <i class="mdui-list-item-icon mdui-icon material-icons">account_balance_wallet</i>
+	        <div class="mdui-list-item-content">订单</div>
+	      </li>
+		  </div>
+	      
+	      <li class="mdui-subheader"></li>
+	    </ul>
+	  </div>
+
+	<div class="total">
+		<div id="left"></div>
+		 
+		<div class="content">
+		<!-- <h1>mall</h1> -->
+		<!-- 写这里 -->
+		
+		<div class="order_head">
+		    <div class="head_background">
+		        <div class="head_box">
+		            <a href="index.html" class="head_left_a"></a>
+		            <h1 class="head_h1">我的订单</h1>
+		            <div class="head_right">
+		                <span class="head_right_in">用户名：azhe</span>
+		            </div>
+		
+		        </div>
+		    </div>
+		</div>
+		<div class="lead_table">
+			<ul class="nav">
+				<li id="all" class="current">全部订单</li>
+				<li id="ready" >已完成</li>
+				<li id="nopay" >未付款</li>
+				<li id="cancel" >已取消</li>
+			</ul>
+		</div>
+		<div class="page"></div>
+		<div class="page">
+		<div class="trolley_background">
+		    <div class="trolley_background_in">
+		        <div class="tro_tab_h">
+					<div class="col tro_tab_null"></div>
+		            <div class="col tro_tab_name">商品名称</div>
+		            <div class="col tro_tab_price">单价</div>
+		            <div class="col tro_tab_number">数量</div>
+		            <div class="col tro_tab_total">合计</div>
+		            <div class="col tro_tab_action">状态</div>
+					<div class="col tro_tab_time">下单时间</div>
+					
+		        </div>
+		        <div class="tro_tab_h1">
+		            <div class="col tro_tab_img">
+		                <img src="img/fengmian.png" alt="">
+		
+		            </div>
+		            <div class="col tro_tab_name">
+		           <li class="tro_tab_name_li1">丰子恺画集</li>
+		           <li class="tro_tab_name_li2">全册</li>
+		
+		            </div>
+		            <div class="col tro_tab_price">
+						99元
+		            </div>
+		            <div class="col tro_tab_number">1</div>
+		            <div class="col tro_tab_total ">99元
+		
+		            </div>
+		            <div class="col tro_tab_action">已完成</div>
+					<div class="col col tro_tab_time">2022-10-24</div>
+		
+		        </div>
+		
+		
+		    </div>
+		</div>
+		</div>
+		<div class="page">
+		<div class="trolley_background">
+		    <div class="trolley_background_in">
+		        <div class="tro_tab_h">
+					<div class="col tro_tab_null"></div>
+		            <div class="col tro_tab_name">商品名称</div>
+		            <div class="col tro_tab_price">单价</div>
+		            <div class="col tro_tab_number">数量</div>
+		            <div class="col tro_tab_total">合计</div>
+		            <div class="col tro_tab_action">状态</div>
+					<div class="col tro_tab_time">下单时间</div>
+					
+		        </div>
+		        <div class="tro_tab_h1">
+		            <div class="col tro_tab_img">
+		                <img src="img/fengmian.png" alt="">
+		
+		            </div>
+		            <div class="col tro_tab_name">
+		           <li class="tro_tab_name_li1">丰子恺画集</li>
+		           <li class="tro_tab_name_li2">全册</li>
+		
+		            </div>
+		            <div class="col tro_tab_price">
+						99元
+		            </div>
+		            <div class="col tro_tab_number">1</div>
+		            <div class="col tro_tab_total ">99元
+		
+		            </div>
+		            <div class="col tro_tab_action">正在处理</div>
+					<div class="col col tro_tab_time">2022-10-24</div>
+		
+		        </div>
+		
+		
+		    </div>
+		</div>
+		</div>
+		<div class="page">
+		<div class="trolley_background">
+		    <div class="trolley_background_in">
+		        <div class="tro_tab_h">
+					<div class="col tro_tab_null"></div>
+		            <div class="col tro_tab_name">商品名称</div>
+		            <div class="col tro_tab_price">单价</div>
+		            <div class="col tro_tab_number">数量</div>
+		            <div class="col tro_tab_total">合计</div>
+		            <div class="col tro_tab_action">状态</div>
+					<div class="col tro_tab_time">下单时间</div>
+					
+		        </div>
+		        <div class="tro_tab_h1">
+		            <div class="col tro_tab_img">
+		                <img src="img/fengmian.png" alt="">
+		
+		            </div>
+		            <div class="col tro_tab_name">
+		           <li class="tro_tab_name_li1">丰子恺画集</li>
+		           <li class="tro_tab_name_li2">全册</li>
+		
+		            </div>
+		            <div class="col tro_tab_price">
+						99元
+		            </div>
+		            <div class="col tro_tab_number">1</div>
+		            <div class="col tro_tab_total ">99元
+		
+		            </div>
+		            <div class="col tro_tab_action">已取消</div>
+					<div class="col col tro_tab_time">2022-10-24</div>
+		
+		        </div>
+		
+		
+		    </div>
+		</div>
+		</div>
+		
+		</div>
+	</div>
+	<script src="js/mdui.min.js"></script>
+	<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+</body>
+<script>
+	function jump_to_DIY(){
+		window.location.href="./index.html";
+	}
+	function jump_to_mall(){
+		window.location.href="./mall.html";
+	}
+	
+	var $ = mdui.$;
+	var inst = new mdui.Drawer('#drawer');
+	
+	var btn = document.getElementById('left');
+	var drawer = document.getElementById('drawer');
+	btn.onmouseover = function() {
+		 inst.open();
+	}
+	document.addEventListener('click',function(){
+	  // drawer.style.display = 'none';//隐藏
+	  inst.close();
+	});
+	
+	var list = document.querySelector('.top').querySelectorAll('li');
+	var items = document.querySelector('.allpage').querySelectorAll('.order');
+	        for (var i = 0; i < list.length; i++) {
+	            list[i].onclick = function() {
+	                // 导航栏样式切换，排他算法
+	                for (var i = 0; i < list.length; i++) {
+	                    list[i].className = '';
+	                }
+	                // this.className = 'current';
+	                // 下面展示内容切换，排他算法
+	                var index = this.getAttribute('data-index');
+					if (index==0) {
+						for (var i = 0; i < items.length; i++) {
+						    items[i].style.display = 'block';
+							list[index].style.background='green';
+							list[i].style.backgroundColor='aquamarine';
+						}
+					}
+					else {
+	                for (var i = 0; i < items.length; i++) {
+	                    items[i].style.display = 'none';
+						list[i].style.background='aquamarine';
+	                }
+	                items[index].style.display = 'block';
+					list[index].style.background='green';
+	            }}
+	        }
+			
+			var list=document.querySelector('.lead_table').querySelectorAll('li');
+			var items=document.querySelectorAll('.page');
+			        for (var i = 0; i < list.length; i++) {
+			            list[i].setAttribute('index', i);
+			            //排他思想
+			            list[i].onclick = function() {
+			            	//1.点击后先消除所有选项卡的样式
+			                for (var i = 0; i < list.length; i++) {
+			                    list[i].className = '';
+			                }
+			                //2.绑定当前选项卡的样式(实现背景色变红)
+			                this.className = 'current';
+			                
+			                //内容显示模块
+			                var index = this.getAttribute('index');//先获得当前点击选项卡的索引值
+							if (index==0){
+								for (var i = 0;i<items.length;i ++){
+								items[i].style.display = 'block';
+							}}
+							else {
+			                for (var i = 0; i < items.length; i++) {
+			                    items[i].style.display = 'none';
+			                }//2.再显示对应index下的模块
+			                items[index].style.display = 'block';}
+			            }
+			        }
+			
+</script>
+</html>
